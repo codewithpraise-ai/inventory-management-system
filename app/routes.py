@@ -55,7 +55,7 @@ def create_item():
 
     if not isinstance(data["price"], (int, float)) or data["price"] < 0:
         return jsonify({
-            "error": "Price must be a positive number"
+            "error": "Price must be a non-negative number"
         }), 400
 
     if not isinstance(data["stock"], int) or data["stock"] < 0:
